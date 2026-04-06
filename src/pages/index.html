@@ -8,15 +8,15 @@
   <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png" />
   <title>Bookery</title>
 
-<!-- Detect and sync theme preference -->
-<script>
-  (function () {
-    const saved = localStorage.getItem('bookery-theme');
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    }
-  })();
-</script>
+  <!-- Detect and sync theme preference -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('bookery-theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
 </head>
 
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-30">
@@ -33,14 +33,14 @@
         </a>
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-8">
-            <a href="index.html"
-              class="text-green-700 dark:text-green-400 font-semibold border-b-2 border-green-600 dark:border-green-400 pb-0.5">Home</a>
-            <a href="listing.html"
-              class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Books</a>
-            <a href="about.html"
-              class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">About</a>
-            <a href="contact.html"
-              class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Contact</a>
+          <a href="index.html"
+            class="text-green-700 dark:text-green-400 font-semibold border-b-2 border-green-600 dark:border-green-400 pb-0.5">Home</a>
+          <a href="listing.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Books</a>
+          <a href="about.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">About</a>
+          <a href="contact.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Contact</a>
         </div>
         <!-- Actions -->
         <div class="flex items-center gap-3">
@@ -93,122 +93,517 @@
     </div>
   </header>
 
-    <!-- Footer -->
-    <footer class="bg-green-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
-            <div class="flex flex-col items-center sm:items-start">
-              <a href="index.html" class="flex items-center gap-2 mb-4">
-                <img src="/src/assets/images/logo.png" alt="Bookery" class="h-10 w-10 object-contain" />
-                <span class="text-2xl font-bold" style="font-family:'Playfair Display',serif">Bookery</span>
-              </a>
-              <p class="text-sm text-green-300 hover:text-white transition-colors leading-relaxed">
-                Your trusted online bookstore.
-                <br>
-                Discover thousands of titles
-                <br>
-                across every genre.
-              </p>
-              <div class="flex gap-3 mt-5">
-                <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                    class="fa-brands fa-facebook" height="28px" width="28px" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
-                    </path>
-                  </svg>
-                </a>
-                <a href="https://web.telegram.org/k/" target="_blank">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
-                    class="fa-brands fa-telegram" height="28px" width="28px" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z">
-                    </path>
-                  </svg>
-                </a>
-                <a href="https://www.tiktok.com/explore?lang=en" target="_blank">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24"
-                    class="h-[30px] w-[30px] p-1" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z">
-                    </path>
-                  </svg>
-    
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col items-center sm:items-start">
-              <h4 class="font-semibold text-green-100 mb-4">Quick Links</h4>
-              <ul class="space-y-2 text-sm">
-                <li><a href="index.html" class="text-green-300 hover:text-white transition-colors">Home</a></li>
-                <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Books</a></li>
-                <li><a href="about.html" class="text-green-300 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="contact.html" class="text-green-300 hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center sm:items-start">
-              <h4 class="font-semibold text-green-100 mb-4">Categories</h4>
-              <ul class="space-y-2 text-sm">
-                <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Fiction</a></li>
-                <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Science</a></li>
-                <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">History</a></li>
-                <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Self-Help</a></li>
-                <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Children's</a></li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-center sm:items-start">
-              <h4 class="font-semibold text-green-100 mb-4">Contact Us</h4>
-              <ul class="space-y-3 text-sm text-green-300 flex flex-col items-center sm:items-start">
-                <li class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <a href="tel:+855975676848" class="hover:text-white transition-colors">+855 975 676 848</a>
-                </li>
-                <li class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <a href="mailto:info.bookery@gmail.com"
-                    class="hover:text-white transition-colors">info.bookery@gmail.com</a>
-                </li>
-              </ul>
-              <h4 class="font-semibold text-green-100 mt-5 mb-4">Address</h4>
-              <a class="text-sm text-green-300 hover:text-white transition-colors leading-relaxed"
-                href="https://maps.app.goo.gl/dVsqRMq7sDG0Q48M8" target="_blank">
-                No. 40, Street 273,
-                <br>
-                Sangkat Boeung Kak I,
-                <br>
-                Khan Toul Kork,
-                <br>
-                Phnom Penh, Cambodia
-              </a>
+
+  <!--Categories-->
+  <section class="pt-16 md:pt-20 pb-16 bg-green-50 dark:bg-gray-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white" style="font-family:'Playfair Display',serif">Browse
+          by Category</h2>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">Find the perfect book from your favorite genre</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <a href="listing.html"
+          class="group flex flex-col items-center gap-3 p-5 bg-green-50 dark:bg-green-900/20 rounded-2xl hover:bg-green-600 dark:hover:bg-green-600 transition-all duration-300 cursor-pointer">
+          <span class="text-3xl group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg"
+              width="28px" height="28px" viewBox="0 0 640 640"
+              class="w-8 h-8 fill-current"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z" />
+            </svg></span>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white">Fiction</span>
+        </a>
+        <a href="listing.html"
+          class="group flex flex-col items-center gap-3 p-5 bg-amber-50 dark:bg-amber-900/20 rounded-2xl hover:bg-amber-500 dark:hover:bg-amber-500 transition-all duration-300 cursor-pointer">
+          <span class="text-3xl group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="w-8 h-8 fill-current"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M240 64C213.5 64 192 85.5 192 112L192 320C192 346.5 213.5 368 240 368L304 368C330.5 368 352 346.5 352 320L352 256L384 256C454.7 256 512 313.3 512 384C512 454.7 454.7 512 384 512L96 512C78.3 512 64 526.3 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 526.3 561.7 512 544 512L527.1 512C557.5 478 576 433.2 576 384C576 278 490 192 384 192L352 192L352 112C352 85.5 330.5 64 304 64L240 64zM184 416C170.7 416 160 426.7 160 440C160 453.3 170.7 464 184 464L360 464C373.3 464 384 453.3 384 440C384 426.7 373.3 416 360 416L184 416z" />
+            </svg></span>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white">Science</span>
+        </a>
+        <a href="listing.html"
+          class="group flex flex-col items-center gap-3 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-2xl hover:bg-blue-500 dark:hover:bg-blue-500 transition-all duration-300 cursor-pointer">
+          <span class="text-3xl group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="w-8 h-8 fill-current"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M32 176C32 134.5 63.6 100.4 104 96.4L104 96L384 96C437 96 480 139 480 192L480 368L304 368C264.2 368 232 400.2 232 440L232 500C232 524.3 212.3 544 188 544C163.7 544 144 524.3 144 500L144 272L80 272C53.5 272 32 250.5 32 224L32 176zM268.8 544C275.9 530.9 280 515.9 280 500L280 440C280 426.7 290.7 416 304 416L552 416C565.3 416 576 426.7 576 440L576 464C576 508.2 540.2 544 496 544L268.8 544zM112 144C94.3 144 80 158.3 80 176L80 224L144 224L144 176C144 158.3 129.7 144 112 144z" />
+            </svg></span>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white">History</span>
+        </a>
+        <a href="listing.html"
+          class="group flex flex-col items-center gap-3 p-5 bg-purple-50 dark:bg-purple-900/20 rounded-2xl hover:bg-purple-500 dark:hover:bg-purple-500 transition-all duration-300 cursor-pointer">
+          <span class="text-3xl group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="w-8 h-8 fill-current"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M424.5 355.1C449 329.2 464 294.4 464 256C464 176.5 399.5 112 320 112C240.5 112 176 176.5 176 256C176 294.4 191 329.2 215.5 355.1C236.8 377.5 260.4 409.1 268.8 448L371.2 448C379.6 409 403.2 377.5 424.5 355.1zM459.3 388.1C435.7 413 416 443.4 416 477.7L416 496C416 540.2 380.2 576 336 576L304 576C259.8 576 224 540.2 224 496L224 477.7C224 443.4 204.3 413 180.7 388.1C148 353.7 128 307.2 128 256C128 150 214 64 320 64C426 64 512 150 512 256C512 307.2 492 353.7 459.3 388.1zM272 248C272 261.3 261.3 272 248 272C234.7 272 224 261.3 224 248C224 199.4 263.4 160 312 160C325.3 160 336 170.7 336 184C336 197.3 325.3 208 312 208C289.9 208 272 225.9 272 248z" />
+            </svg></span>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white">Self-Help</span>
+        </a>
+        <a href="listing.html"
+          class="group flex flex-col items-center gap-3 p-5 bg-rose-50 dark:bg-rose-900/20 rounded-2xl hover:bg-rose-500 dark:hover:bg-rose-500 transition-all duration-300 cursor-pointer">
+          <span class="text-3xl group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="w-8 h-8 fill-current"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M119.7 263.7L150.6 294.6C156.6 300.6 164.7 304 173.2 304L194.7 304C203.2 304 211.3 307.4 217.3 313.4L246.6 342.7C252.6 348.7 256 356.8 256 365.3L256 402.8C256 411.3 259.4 419.4 265.4 425.4L278.7 438.7C284.7 444.7 288.1 452.8 288.1 461.3L288.1 480C288.1 497.7 302.4 512 320.1 512C337.8 512 352.1 497.7 352.1 480L352.1 477.3C352.1 468.8 355.5 460.7 361.5 454.7L406.8 409.4C412.8 403.4 416.2 395.3 416.2 386.8L416.2 352.1C416.2 334.4 401.9 320.1 384.2 320.1L301.5 320.1C293 320.1 284.9 316.7 278.9 310.7L262.9 294.7C258.7 290.5 256.3 284.7 256.3 278.7C256.3 266.2 266.4 256.1 278.9 256.1L313.6 256.1C326.1 256.1 336.2 246 336.2 233.5C336.2 227.5 333.8 221.7 329.6 217.5L309.9 197.8C306 194 304 189.1 304 184C304 178.9 306 174 309.7 170.3L327 153C332.8 147.2 336.1 139.3 336.1 131.1C336.1 123.9 333.7 117.4 329.7 112.2C326.5 112.1 323.3 112 320.1 112C224.7 112 144.4 176.2 119.8 263.7zM528 320C528 285.4 519.6 252.8 504.6 224.2C498.2 225.1 491.9 228.1 486.7 233.3L473.3 246.7C467.3 252.7 463.9 260.8 463.9 269.3L463.9 304C463.9 321.7 478.2 336 495.9 336L520 336C522.5 336 525 335.7 527.3 335.2C527.7 330.2 527.8 325.1 527.8 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320z" />
+            </svg></span>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white">Travel</span>
+        </a>
+        <a href="listing.html"
+          class="group flex flex-col items-center gap-3 p-5 bg-yellow-50 dark:bg-yellow-900/20 rounded-2xl hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 cursor-pointer">
+          <span class="text-3xl group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="w-8 h-8 fill-current"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M256 128C256 92.7 284.7 64 320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128zM304 448L304 544C304 561.7 289.7 576 272 576C254.3 576 240 561.7 240 544L240 351.8L219.1 385C209.7 400 189.9 404.4 175 395C160.1 385.6 155.5 365.9 164.9 351L204.8 287.7C229.7 248 273.2 224 320 224C366.8 224 410.3 248 435.2 287.6L475.1 351C484.5 366 480 385.7 465.1 395.1C450.2 404.5 430.4 400 421 385.1L400 351.8L400 544C400 561.7 385.7 576 368 576C350.3 576 336 561.7 336 544L336 448L304 448z" />
+            </svg></span>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-white">Children's</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- ===== FOOTER ===== -->
+
+  <!--Featured books-->
+  <section class="py-16 bg-gray-50 dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white" style="font-family:'Playfair Display',serif">
+            Featured Books</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1">Hand-picked by our team just for you</p>
+        </div>
+        <a href="listing.html"
+          class="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 font-medium text-sm flex items-center gap-1">
+          View All
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://khbookshop.com/wp-content/uploads/2020/07/Untitledad8-1.jpg" alt="IKIGAI"
+              class="w-90 h-90 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+              Bestseller</div>
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Self help</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">IKIGAI</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by García and Francesc Miralles </p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$10</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
             </div>
           </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://content-asset.phsar121.com/products/4AGJOoXNnlcLirYMXThJw60JGZiaewCwcZkDm6mY.jpg"
+              alt="កោះកេរ និងព្រះបាទជ័យវរ្ម័នទី៤"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full">New
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">History</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">កោះកេរ និងព្រះបាទជ័យវរ្ម័នទី៤</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by ចិន្ត ច័ន្ទរតនា</p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★☆</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$9</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://khbookshop.com/wp-content/uploads/2021/07/Untitled-4-300x300.jpg"
+              alt="កិច្ចព្រមព្រៀងទាំងបួនប្រការ"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Self help</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">កិច្ចព្រមព្រៀងទាំងបួនប្រការ</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by Don Miguel Ruiz</p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$9</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://khbookshop.com/wp-content/uploads/2020/07/Untitled-112.jpg" alt="ដើរចេញពីអតីតកាល"
+              class="w-100 h-100 object-cover group-hover:scale-105 transition-transform duration-500" />
+
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Self help</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">ដើរចេញពីអតីតកាល</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by កូនចាបមាស</p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★☆</div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-green-700 dark:text-green-400 font-bold">$8</span>
+
+              </div>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://content-asset.phsar121.com/products/BSNLjlo0OI0axXVUKHWo1TvEC1LQQZTKzRSmSo43.jpg"
+              alt="Who in your room"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Self development</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">Who's in your room</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by Stewart Emery, Dr. Ivan Misner, and Doug Hardy
+            </p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$5</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://content-asset.phsar121.com/products/s2X1xBHFZmmj7rbPtHkEh3ycgLieh9mu2XUFonyM.jpg"
+              alt="អនាគតភាពនៃអ្វីៗទាំងអស់"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+              Bestseller</div>
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Self development</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">អនាគតភាពនៃអ្វីៗទាំងអស់</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by Dr. Patrick Dixon</p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★☆</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$8</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://content-asset.phsar121.com/products/1dCBDpJhJJ4QStl37LA73E1HrGiIflxRK19BNxmO.jpg"
+              alt="តម្រាចិត្តសាស្ត្រ"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Psychology</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">តម្រាចិត្តសាស្ត្រ</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by អ៊ុំ រដ្ឋា</p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★☆☆</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$4</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="detail.html"
+          class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://content-asset.phsar121.com/products/lq2dcMu1ydBpvyIXimKuqRplFtnlY3A1HT5fz6Id.jpg"
+              alt="7 habits of highly effective people"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-3 left-3 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full">New
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Self development</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-1">7 habits of highly effective
+              people</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">by Stephen R. Covey</p>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$7</span>
+              <button
+                class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-700 transition-colors">Add
+                to Cart</button>
+            </div>
+          </div>
+        </a>
+
+      </div>
+      <div class="text-center mt-10">
+        <a href="listing.html"
+          class="inline-block border-2 border-green-600 dark:border-green-500 text-green-700 dark:text-green-400 px-8 py-3 rounded-xl font-semibold hover:bg-green-600 dark:hover:bg-green-600 hover:text-white dark:hover:text-white transition-all duration-300">View
+          All Books</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Why bookery-->
+  <section class="py-16 bg-green-50 dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white" style="font-family:'Playfair Display',serif">Why
+          Choose Bookery?</h2>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">We make reading easy, enjoyable, and affordable</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-3xl hover:shadow-lg dark:hover:shadow-gray-900/50 transition-shadow">
           <div
-            class="border-t border-green-700 mt-10 pt-6 text-green-400 text-sm flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-            <p>© 2026 Bookery. All rights reserved. Made by ISTAD students.</p>
-            <div class="flex items-center gap-5">
-              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-              <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"
+              class="w-8 h-8"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M465.4 192L431.1 144L209 144L174.7 192L465.4 192zM96 212.5C96 199.2 100.2 186.2 107.9 175.3L156.9 106.8C168.9 90 188.3 80 208.9 80L431 80C451.7 80 471.1 90 483.1 106.8L532 175.3C539.8 186.2 543.9 199.2 543.9 212.5L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 212.5z" />
+            </svg></div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" style="font-family:'Playfair Display',serif">
+            Fast Delivery</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Get your books delivered to your doorstep within
+            2-3 business days. Free shipping on orders over $30.</p>
+        </div>
+        <div
+          class="text-center p-8 bg-amber-50 dark:bg-amber-900/20 rounded-3xl hover:shadow-lg dark:hover:shadow-gray-900/50 transition-shadow">
+          <div
+            class="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"
+              class="w-8 h-8"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M392 176L248 176L210.7 101.5C208.9 97.9 208 93.9 208 89.9C208 75.6 219.6 64 233.9 64L406.1 64C420.4 64 432 75.6 432 89.9C432 93.9 431.1 97.9 429.3 101.5L392 176zM233.6 224L406.4 224L455.1 264.6C521.6 320 560 402 560 488.5C560 536.8 520.8 576 472.5 576L167.4 576C119.2 576 80 536.8 80 488.5C80 402 118.4 320 184.9 264.6L233.6 224zM324 288C313 288 304 297 304 308L304 312C275.2 312.3 252 335.7 252 364.5C252 390.2 270.5 412.1 295.9 416.3L337.6 423.3C343.6 424.3 348 429.5 348 435.6C348 442.5 342.4 448.1 335.5 448.1L280 448C269 448 260 457 260 468C260 479 269 488 280 488L304 488L304 492C304 503 313 512 324 512C335 512 344 503 344 492L344 487.3C369 483.2 388 461.6 388 435.5C388 409.8 369.5 387.9 344.1 383.7L302.4 376.7C296.4 375.7 292 370.5 292 364.4C292 357.5 297.6 351.9 304.5 351.9L352 351.9C363 351.9 372 342.9 372 331.9C372 320.9 363 311.9 352 311.9L344 311.9L344 307.9C344 296.9 335 287.9 324 287.9z" />
+            </svg></div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" style="font-family:'Playfair Display',serif">
+            Best Prices</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We offer competitive prices and weekly deals. Save
+            up to 40% on selected titles every week.</p>
+        </div>
+        <div
+          class="text-center p-8 bg-blue-50 dark:bg-blue-900/20 rounded-3xl hover:shadow-lg dark:hover:shadow-gray-900/50 transition-shadow">
+          <div
+            class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"
+              class="w-8 h-8"><!--!Font Awesome Pro v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M216.3 124C262.5 44 378 44 424.2 124L461.5 188.6L489.2 172.6C497.6 167.7 508.1 168.4 515.8 174.3C523.5 180.2 526.9 190.2 524.4 199.6L500.9 287C497.5 299.8 484.3 307.4 471.5 304L384.1 280.6C374.7 278.1 367.8 270.2 366.5 260.6C365.2 251 369.9 241.5 378.3 236.7L406 220.7L368.7 156.1C347.1 118.8 293.3 118.8 271.7 156.1L266.4 165.2C257.6 180.5 238 185.7 222.7 176.9C207.4 168.1 202.2 148.5 211 133.1L216.3 124zM513.7 343.1C529 334.3 548.6 339.5 557.4 354.8L562.7 363.9C608.9 443.9 551.2 543.9 458.8 543.9L384.2 543.9L384.2 575.9C384.2 585.6 378.4 594.4 369.4 598.1C360.4 601.8 350.1 599.8 343.2 592.9L279.2 528.9C269.8 519.5 269.8 504.3 279.2 495L343.2 431C350.1 424.1 360.4 422.1 369.4 425.8C378.4 429.5 384.2 438.3 384.2 448L384.2 480L458.8 480C501.9 480 528.9 433.3 507.3 396L502 386.9C493.2 371.6 498.4 352 513.7 343.2zM115 299.4L87.3 283.4C78.9 278.5 74.2 269.1 75.5 259.5C76.8 249.9 83.7 242 93.1 239.5L180.5 216C193.3 212.6 206.5 220.2 209.9 233L233.3 320.4C235.8 329.8 232.4 339.7 224.7 345.7C217 351.7 206.5 352.3 198.1 347.4L170.4 331.4L133.1 396C111.5 433.3 138.5 480 181.6 480L192.2 480C209.9 480 224.2 494.3 224.2 512C224.2 529.7 209.9 544 192.2 544L181.6 544C89.3 544 31.6 444 77.8 364L115 299.4z" />
+            </svg></div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" style="font-family:'Playfair Display',serif">
+            Easy Returns</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Not satisfied? Return any book within 7 days, no
+            questions asked. Your satisfaction is our priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Tesinials-->
+  <section class="py-16 bg-green-700 dark:bg-green-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white" style="font-family:'Playfair Display',serif">What Our Readers Say</h2>
+        <p class="text-green-200 mt-2">Real reviews from our community</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div class="flex text-amber-300 text-xl mb-4">★★★★★</div>
+          <p class="text-green-100 italic leading-relaxed mb-5">"The best online book store I've ever bought. Highly
+            recommend!"</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pinimg.com/736x/dc/fc/2f/dcfc2fef1cb5f4176d83d9170e7ac740.jpg" alt="Reviewer"
+              class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-white font-semibold text-sm">The beloved wife of Tena</p>
+              <p class="text-green-300 text-xs">Book Club Member</p>
             </div>
           </div>
         </div>
-      </footer>
-    
-    
-    <!-- Script -->
-    <script>
-      document.getElementById('theme-toggle').addEventListener('click', function () {
-        document.documentElement.classList.toggle('dark');
-        localStorage.setItem('bookery-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-      });
-    </script>
-    </body>
-    </html>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div class="flex text-amber-300 text-xl mb-4">★★★★★</div>
+          <p class="text-green-100 italic leading-relaxed mb-5">"Fast delivery, great packaging, and the customer
+            support is wonderful."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pinimg.com/736x/cc/55/bb/cc55bb4a95767942e5986bbcaa187807.jpg" alt="Reviewer"
+              class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-white font-semibold text-sm">Heng Pitu</p>
+              <p class="text-green-300 text-xs">One side love God</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div class="flex text-amber-300 text-xl mb-4">★★★★☆</div>
+          <p class="text-green-100 italic leading-relaxed mb-5">"The book quality is the best and affordable"</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pinimg.com/1200x/ed/62/c4/ed62c4744bb9e06628e30c16546a8cd5.jpg" alt="Reviewer"
+              class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-white font-semibold text-sm">Pich solika</p>
+              <p class="text-green-300 text-xs">Simple wowan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
+        <div class="flex flex-col items-center sm:items-start">
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <img src="/src/assets/images/logo.png" alt="Bookery" class="h-10 w-10 object-contain" />
+            <span class="text-2xl font-bold" style="font-family:'Playfair Display',serif">Bookery</span>
+          </a>
+          <p class="text-sm text-green-300 hover:text-white transition-colors leading-relaxed">
+            Your trusted online bookstore.
+            <br>
+            Discover thousands of titles
+            <br>
+            across every genre.
+          </p>
+          <div class="flex gap-3 mt-5">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                class="fa-brands fa-facebook" height="28px" width="28px" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://web.telegram.org/k/" target="_blank">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+                class="fa-brands fa-telegram" height="28px" width="28px" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/explore?lang=en" target="_blank">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24"
+                class="h-[30px] w-[30px] p-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z">
+                </path>
+              </svg>
+
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center sm:items-start">
+          <h4 class="font-semibold text-green-100 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-green-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Books</a></li>
+            <li><a href="about.html" class="text-green-300 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="text-green-300 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center sm:items-start">
+          <h4 class="font-semibold text-green-100 mb-4">Categories</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Fiction</a></li>
+            <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Science</a></li>
+            <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">History</a></li>
+            <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Self-Help</a></li>
+            <li><a href="listing.html" class="text-green-300 hover:text-white transition-colors">Children's</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center sm:items-start">
+          <h4 class="font-semibold text-green-100 mb-4">Contact Us</h4>
+          <ul class="space-y-3 text-sm text-green-300 flex flex-col items-center sm:items-start">
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <a href="tel:+855975676848" class="hover:text-white transition-colors">+855 975 676 848</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:info.bookery@gmail.com"
+                class="hover:text-white transition-colors">info.bookery@gmail.com</a>
+            </li>
+          </ul>
+          <h4 class="font-semibold text-green-100 mt-5 mb-4">Address</h4>
+          <a class="text-sm text-green-300 hover:text-white transition-colors leading-relaxed"
+            href="https://maps.app.goo.gl/dVsqRMq7sDG0Q48M8" target="_blank">
+            No. 40, Street 273,
+            <br>
+            Sangkat Boeung Kak I,
+            <br>
+            Khan Toul Kork,
+            <br>
+            Phnom Penh, Cambodia
+          </a>
+        </div>
+      </div>
+      <div
+        class="border-t border-green-700 mt-10 pt-6 text-green-400 text-sm flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <p>© 2026 Bookery. All rights reserved. Made by ISTAD students.</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Script -->
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('bookery-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
