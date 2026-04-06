@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Tailwind build output (auto-generated from input.css)
+src/css/output.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

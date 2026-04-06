@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/output.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="/src/assets/images/logo.png" />
+  <title>Bookery - Login</title>
+
+  <!-- Detect and sync theme preference -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('bookery-theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-300">
+
+<!-- Navigation bar -->
+  <header
+    class="fixed inset-x-0 top-0 z-50 mx-auto w-full max-w-screen-lg border border-gray-100 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="/src/assets/images/logo.png" alt="Bookery Logo" class="h-10 w-10 object-contain" />
+          <span class="text-2xl font-bold text-green-700 dark:text-green-400"
+            style="font-family:'Playfair Display',serif">Bookery</span>
+        </a>
+        <div>
+          <a href="index.html"
+            class="text-sm text-gray-500 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+</body>
+
+</html>
