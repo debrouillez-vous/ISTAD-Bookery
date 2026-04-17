@@ -8,7 +8,6 @@
   <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png" />
   <title>Bookery - Collections</title>
 
-
   <!-- Detect and sync theme preference -->
   <script>
     (function () {
@@ -104,330 +103,428 @@
   </div>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="w-full max-w-[96vw] 2xl:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="flex flex-col lg:flex-row gap-8">
-
-      <!-- ===== SIDEBAR ===== -->
 
 
       <!-- ===== BOOK GRID ===== -->
       <div class="flex-1">
-        <div class="flex items-center justify-between mb-5">
-          <p class="text-sm text-gray-500 dark:text-gray-400">Showing <span
-              class="font-semibold text-gray-800 dark:text-gray-200">1–12</span> of 1,021 books</p>
-          <div class="flex gap-2">
-            <button class="p-2 bg-green-600 text-white rounded-lg">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-              </svg>
-            </button>
-            <button
-              class="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 rounded-lg hover:border-green-400 dark:hover:border-green-500">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd"
-                  d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd" />
-              </svg>
-            </button>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-8 gap-3 sm:gap-4">
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/the-let-them-theory-1768546359.jpg"
+              alt="The Let Them Theory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-green-600 text-white text-[11px] font-semibold px-2 py-1 rounded-md">HOT</span>
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Let Them Theory</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Mel Robbins</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-5">
-
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://content-asset.phsar121.com/products/s2X1xBHFZmmj7rbPtHkEh3ycgLieh9mu2XUFonyM.jpg"
-                alt="Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                Bestseller</div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self development</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">អនាគតភាពនៃអ្វីៗទាំងអស់
-              </h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Dr. Patrick Dixon</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★★ <span class="text-gray-400 dark:text-gray-500">(241)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$8</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/the-48-laws-of-power-1767277708.jpg"
+            alt="The 48 Laws of Power" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The 48 Laws of Power</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Robert Greene</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://content-asset.phsar121.com/products/BSNLjlo0OI0axXVUKHWo1TvEC1LQQZTKzRSmSo43.jpg"
-                alt="Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">New
-              </div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self help</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">Who's in your room
-              </h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5"></p>by Stewart Emery, Dr. Ivan Misner, and Doug
-              Hardy<div class="text-amber-400 text-xs mt-1">★★★★☆ <span
-                  class="text-gray-400 dark:text-gray-500">(98)</span></div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$5</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/ego-is-the-enemy-1767251112.jpg" 
+            alt="Ego is the Enemy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Ego is the Enemy</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ryan Holiday</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://khbookshop.com/wp-content/uploads/2020/07/Untitled-112.jpg" alt="Book"
-                class="w-100 h-80 object-cover group-hover:scale-105 transition-transform duration-500" /><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">General</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">ដើរចេញពីអតីតកាល</h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">កូនចាបមាស</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★★ <span class="text-gray-400 dark:text-gray-500">(312)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$8</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/atomic-habits-an-easy-and-proven-way-to-build-good-habits-and-break-bad-ones-1767277354.jpg" alt="Atomic Habits"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Atomic Habits</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Don Miguel Ruiz</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$18.00</span>
+                <span class="text-xs text-gray-400 line-through">$20.00</span>
+              </div>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://khbookshop.com/wp-content/uploads/2021/07/Untitled-4-300x300.jpg" alt="Book"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-rose-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">-20%
-              </div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self help</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">
-                កិច្ចព្រមព្រៀងទាំងបួនប្រការ</h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">by Don Miguel Ruiz</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★☆ <span class="text-gray-400 dark:text-gray-500">(175)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <div><span class="text-green-700 dark:text-green-400 font-bold text-sm">$9</span><span
-                    class="text-xs text-gray-400 dark:text-gray-500 line-through ml-1">$11.99</span></div><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button>
-              </div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/surrounded-by-idiots-1767510494.jpg"
+              alt="Surrounded by Idiots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Surrounded by Idiots</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Thomas Erikson</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://khbookshop.com/wp-content/uploads/2019/06/%E1%9E%94%E1%9E%BE%E1%9E%80%E1%9E%82%E1%9F%86%E1%9E%93%E1%9E%B7%E1%9E%8F%E1%9E%A2%E1%9E%97%E1%9E%B7%E1%9E%9C%E1%9E%8C%E1%9F%92%E1%9E%8D%E1%9E%81%E1%9F%92%E1%9E%9B%E1%9E%BD%E1%9E%93.jpg"
-                alt="Book"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self development</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">បើកគំនិតអភិវឌ្ឍខ្លួន
-              </h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5"></p> Ourn Sarath<div
-                class="text-amber-400 text-xs mt-1">★★★★★ <span class="text-gray-400 dark:text-gray-500">(89)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$6.50</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/rich-dad-poor-dad-1767203626.jpg"
+              alt="Rich Dad Poor Dad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Rich Dad Poor Dad</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Robert Kiyosaki</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://content-asset.phsar121.com/products/rZLpZQyrgrJHRHwjZrZ7DGV4n5PflWGKxsrS5pGJ.jpg"
-                alt="Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                Bestseller</div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Psychology</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">The Real man</h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">ឈុំ សីហា</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★☆ <span class="text-gray-400 dark:text-gray-500">(203)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$4</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/the-psychology-of-money-1767327972.jpg"
+              alt="The Psychology of Money" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Psychology of Money</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Morgan Housel</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://content-asset.phsar121.com/products/iaMv06sh5DFd9H7ZK1yLBMplZChJ3OyJENqWpIOG.jpg"
-                alt="Book"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Psychology</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">Social Media Marketing
-              </h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">by Heart Book team</p>
-              <div class="text-amber-400 text-xs mt-1">★★★☆☆ <span class="text-gray-400 dark:text-gray-500">(44)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$5.75</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/before-the-coffee-gets-cold-1767328435.jpg" alt="Before the Coffee Gets Cold"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Before the Coffee Gets Cold</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Toshikazu Kawaguchi</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://khbookshop.com/wp-content/uploads/2019/06/%E1%9E%B6%E1%9F%A4.jpg" alt="Book"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">New
-              </div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self help</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1"></h3>Motivation and
-              self-delevopment<p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">by Chom Seyha</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★★ <span class="text-gray-400 dark:text-gray-500">(156)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$7.50</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+         <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/the-little-prince-1775480942.jpg" alt="The Little Prince"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Little Prince</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Antoine de Saint-Exupéry</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://content-asset.phsar121.com/products/o2HWdZDnx33oyfvrJPdH2soVMx7dUGfgI7Swus76.jpg"
-                alt="Book"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self-Help</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">Refill Your Life</h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">by Heart Book Team</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★☆ <span class="text-gray-400 dark:text-gray-500">(77)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$6</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+         <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/alchemised-1775533316.jpg" alt="Alchemised"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Alchemised</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">SenLinYu</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://5.imimg.com/data5/SELLER/Default/2024/9/451053603/BH/KA/SA/231929105/flipkart-images-7-png.png"
-                alt="Book" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-rose-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">-15%
-              </div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Self development</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">Atomic Habits</h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">James Clear</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★☆ <span class="text-gray-400 dark:text-gray-500">(134)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <div><span class="text-green-700 dark:text-green-400 font-bold text-sm">$8</span><span
-                    class="text-xs text-gray-400 dark:text-gray-500 line-through ml-1">$9.99</span></div><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button>
-              </div>
-            </div>
+         <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://m.media-amazon.com/images/I/811CMfBEN4L._SY342_.jpg" alt="Never Thought I'd End Up Here"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Never Thought I'd End Up Here</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ann Liang</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$15.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://down-my.img.susercontent.com/file/my-11134207-7r98z-lmsb63d43h77c1" alt="Book"
-                class="w-full h-85 object-cover group-hover:scale-105 transition-transform duration-500" /><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">self-delevopment</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">Happiness in hard time
-              </h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Andrew matthews</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★★ <span class="text-gray-400 dark:text-gray-500">(63)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$7</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://m.media-amazon.com/images/I/71thuQZd-FL._SY466_.jpg" alt="Replaceable You: Adventures in Human Anatomy "
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Replaceable You: Adventures in Human Anatomy </h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Mary Roach</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$15.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-          <a href="detail.html"
-            class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-            <div class="relative overflow-hidden h-52"><img
-                src="https://static-ppimages.freetls.fastly.net/nielsens/9780749928896.jpg?canvas=600,600&fit=bounds&height=600&mode=max&width=600&404=default.jpg"
-                alt="Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                Bestseller</div><button
-                class="absolute top-2 right-2 w-7 h-7 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100">♡</button>
-            </div>
-            <div class="p-3">
-              <p class="text-xs text-green-600 dark:text-green-400 font-medium">Fiction</p>
-              <h3 class="font-semibold text-gray-900 dark:text-white text-sm mt-0.5 line-clamp-1">Born in Fire</h3>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Nora Robert</p>
-              <div class="text-amber-400 text-xs mt-1">★★★★★ <span class="text-gray-400 dark:text-gray-500">(289)</span>
-              </div>
-              <div class="flex items-center justify-between mt-2"><span
-                  class="text-green-700 dark:text-green-400 font-bold text-sm">$39</span><button
-                  class="bg-green-600 text-white text-xs px-2.5 py-1 rounded-lg hover:bg-green-700 transition-colors">+
-                  Cart</button></div>
-            </div>
+         <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://images-us.bookshop.org/ingram/9781324090977.jpg?v=364aca78cabbba3507405e1e6b47d6cd" alt="Live Laugh Love: The Secret History of White Christian Women and the World They Made"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Live Laugh Love: The Secret History of White Christian Women and the World They Made</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Kristin Kobes Du Mez</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$25.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-        </div>
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://images-us.bookshop.org/ingram/9781637635568.jpg?v=2ebfd1cf46241cdf78b8919b97ead537" alt="Trump's Ten Commandments: Strategic Lessons from the Trump Leadership Toolbox"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Trump's Ten Commandments: Strategic Lessons from the Trump Leadership Toolbox</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Jeffrey Sonnenfeld</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$25.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
 
-        <!-- PAGINATION -->
-        <div class="flex items-center justify-center gap-2 mt-10">
-          <button
-            class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-500 hover:border-green-400 hover:text-green-600 transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            class="w-9 h-9 flex items-center justify-center rounded-lg bg-green-600 text-white text-sm font-semibold">1</button>
-          <button
-            class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">2</button>
-          <button
-            class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">3</button>
-          <span class="text-gray-400 dark:text-gray-500 text-sm">...</span>
-          <button
-            class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">870</button>
-          <button
-            class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-green-400 hover:text-green-600 transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+         <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://images-us.bookshop.org/ingram/9780593978023.jpg?v=ec5f202e8d1653a2aafdf701233cc987" alt="Chain of Ideas The Origins of Our Authoritarian Age"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Chain of Ideas: The Origins of Our Authoritarian Age</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ibram X. Kendi</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$25.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://images-us.bookshop.org/ingram/9780593820261.jpg?v=cbacae5df5754bf3dc583f09ef8885d6" alt="Carl's Doomsday Scenario"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Carl's Doomsday Scenario</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Matt Dinniman</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$24.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://images-us.bookshop.org/ingram/9780141439518.jpg?v=enc-v1" alt="Pride and Prejudice"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Pride and Prejudice</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Jane Austen</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$8.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://imgs.search.brave.com/aI_1h5cS7Xk_QPNGObS8EAJy-MvMn55BiZjcUoedMV0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxT3c2TVVPeDJM/LmpwZw" alt="The Art of War"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Art of War</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Sun Tzu</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://imgs.search.brave.com/WQ6h75ty7-ytv-XG9c5PywSF82c0aAWjMzAlXL4i4r0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxdERsWlJLRzdM/LmpwZw" alt="The Prince"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Prince</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Niccolò Machiavelli</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://i.thriftbooks.com/api/imagehandler/s/4CF42EE9E0D50CCB9C53F75570637957B7BAEDC5.jpeg" alt="Alexander Hamilton"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Alexander Hamilton</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ron Chernow</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$6.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/you-become-what-you-think-1767259216.jpg" alt="You Become What You Think"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">You Become What You Think</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Shubham Kumar Singh</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$11.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/the-power-of-discipline-how-to-use-self-control-and-mental-toughness-to-achieve-your-goals-1767277249.jpg" alt="The Power of Discipline"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Power of Discipline: How to Use Self Control and Mental Toughness to Achieve Your Goals</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Daniel Walter</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+         <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/dont-believe-everything-you-think-1767250619.jpg" alt="Don't Believe Everything You Think"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Don't Believe Everything You Think</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Joseph Nguyen</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$13.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article
+          class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+          <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
+            <img src="https://booksharekh.com/images/covers/digital-marketing-strategy-an-integrated-approach-to-online-marketing-1767339639.jpg" alt="Digital Marketing Strategy: An Integrated Approach to Online Marketing"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-3.5 flex flex-1 flex-col">
+            <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Digital Marketing Strategy: An Integrated Approach to Online Marketing</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">John Doe</p>
+            <div class="mt-auto pt-2 flex items-center justify-between">
+              <span class="text-green-700 dark:text-green-400 font-bold">$13.00</span>
+              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+            </div>
+          </div>
+        </article>
+        
+      </div>
+
+      <div class="flex items-center justify-center gap-2 mt-10">
+        <button
+          class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-500 hover:border-green-400 hover:text-green-600 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          class="w-9 h-9 flex items-center justify-center rounded-lg bg-green-600 text-white text-sm font-semibold">1</button>
+        <button
+          class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">2</button>
+        <button
+          class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">3</button>
+        <span class="text-gray-400 dark:text-gray-500 text-sm">...</span>
+        <button
+          class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">870</button>
+        <button
+          class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-green-400 hover:text-green-600 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
       </div>
     </div>
   </div>
