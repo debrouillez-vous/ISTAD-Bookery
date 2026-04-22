@@ -19,7 +19,7 @@
   </script>
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-30">
+<body class="bg-[#f5f5f5] dark:bg-gray-900 text-gray-900 dark:text-white pt-30">
   <!-- Navigation bar -->
   <header
     class="fixed inset-x-0 top-0 z-50 mx-auto w-full max-w-screen-lg border border-gray-100 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-xl">
@@ -92,7 +92,7 @@
     </div>
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-      class="hidden md:hidden border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 space-y-2">
+      class="hidden md:hidden border-t border-gray-100 dark:border-gray-700 bg-[#f5f5f5] dark:bg-gray-900 px-4 py-3 space-y-2">
       <a href="index.html" class="block py-2 text-green-700 dark:text-green-400 font-semibold">Home</a>
       <a href="listing.html" class="block py-2 text-gray-700 dark:text-gray-300">Books</a>
       <a href="about.html" class="block py-2 text-gray-700 dark:text-gray-300">About</a>
@@ -108,7 +108,7 @@
 
 
   <!--Categories-->
-  <section class="pt-16 md:pt-20 pb-16 bg-white dark:bg-gray-900">
+  <section class="pt-16 md:pt-20 pb-16 bg-[#f5f5f5] dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center mb-10">
@@ -182,7 +182,7 @@
   </section>
   
   <!--Most Sold Books-->
-  <section class="py-16 bg-gray-50 dark:bg-gray-950/60">
+  <section class="py-16 bg-[#f5f5f5] dark:bg-gray-950/60">
     <div class="w-full max-w-[96vw] 2xl:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-10">
         <div>
@@ -203,14 +203,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/the-let-them-theory-1768546359.jpg"
               alt="The Let Them Theory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <span class="absolute top-2 left-2 bg-green-600 text-white text-[11px] font-semibold px-2 py-1 rounded-md">HOT</span>
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Let Them Theory</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Mel Robbins</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$20.99</span>
+                <span class="text-xs text-gray-400 line-through">$26.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -220,13 +223,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/the-48-laws-of-power-1767277708.jpg"
             alt="The 48 Laws of Power" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The 48 Laws of Power</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Robert Greene</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$20.99</span>
+                <span class="text-xs text-gray-400 line-through">$26.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -236,13 +243,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/ego-is-the-enemy-1767251112.jpg" 
             alt="Ego is the Enemy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Ego is the Enemy</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ryan Holiday</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -259,10 +270,10 @@
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Don Miguel Ruiz</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
               <div class="flex items-end gap-1.5">
-                <span class="text-green-700 dark:text-green-400 font-bold">$18.00</span>
-                <span class="text-xs text-gray-400 line-through">$20.00</span>
+                <span class="text-green-700 dark:text-green-400 font-bold">$18.99</span>
+                <span class="text-xs text-gray-400 line-through">$23.74</span>
               </div>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -272,13 +283,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/surrounded-by-idiots-1767510494.jpg"
               alt="Surrounded by Idiots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Surrounded by Idiots</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Thomas Erikson</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$20.99</span>
+                <span class="text-xs text-gray-400 line-through">$26.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -288,13 +303,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/rich-dad-poor-dad-1767203626.jpg"
               alt="Rich Dad Poor Dad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Rich Dad Poor Dad</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Robert Kiyosaki</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -304,13 +323,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/the-psychology-of-money-1767327972.jpg"
               alt="The Psychology of Money" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Psychology of Money</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Morgan Housel</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -320,13 +343,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/before-the-coffee-gets-cold-1767328435.jpg" alt="Before the Coffee Gets Cold"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Before the Coffee Gets Cold</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Toshikazu Kawaguchi</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -336,13 +363,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/the-little-prince-1775480942.jpg" alt="The Little Prince"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Little Prince</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Antoine de Saint-Exupéry</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -352,13 +383,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/alchemised-1775533316.jpg" alt="Alchemised"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Alchemised</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">SenLinYu</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -368,13 +403,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://m.media-amazon.com/images/I/811CMfBEN4L._SY342_.jpg" alt="Never Thought I'd End Up Here"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Never Thought I'd End Up Here</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ann Liang</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$15.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$15.99</span>
+                <span class="text-xs text-gray-400 line-through">$19.99</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -384,13 +423,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://m.media-amazon.com/images/I/71thuQZd-FL._SY466_.jpg" alt="Replaceable You: Adventures in Human Anatomy "
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Replaceable You: Adventures in Human Anatomy </h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Mary Roach</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$15.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$15.99</span>
+                <span class="text-xs text-gray-400 line-through">$19.99</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -400,13 +443,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://images-us.bookshop.org/ingram/9781324090977.jpg?v=364aca78cabbba3507405e1e6b47d6cd" alt="Live Laugh Love: The Secret History of White Christian Women and the World They Made"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Live Laugh Love: The Secret History of White Christian Women and the World They Made</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Kristin Kobes Du Mez</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$25.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$25.99</span>
+                <span class="text-xs text-gray-400 line-through">$32.49</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -416,13 +463,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://images-us.bookshop.org/ingram/9781637635568.jpg?v=2ebfd1cf46241cdf78b8919b97ead537" alt="Trump's Ten Commandments: Strategic Lessons from the Trump Leadership Toolbox"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Trump's Ten Commandments: Strategic Lessons from the Trump Leadership Toolbox</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Jeffrey Sonnenfeld</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$25.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$25.99</span>
+                <span class="text-xs text-gray-400 line-through">$32.49</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -432,13 +483,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://images-us.bookshop.org/ingram/9780593978023.jpg?v=ec5f202e8d1653a2aafdf701233cc987" alt="Chain of Ideas The Origins of Our Authoritarian Age"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Chain of Ideas: The Origins of Our Authoritarian Age</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ibram X. Kendi</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$25.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$25.99</span>
+                <span class="text-xs text-gray-400 line-through">$32.49</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -448,13 +503,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://images-us.bookshop.org/ingram/9780593820261.jpg?v=cbacae5df5754bf3dc583f09ef8885d6" alt="Carl's Doomsday Scenario"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Carl's Doomsday Scenario</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Matt Dinniman</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$24.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$24.99</span>
+                <span class="text-xs text-gray-400 line-through">$31.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -464,13 +523,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://images-us.bookshop.org/ingram/9780141439518.jpg?v=enc-v1" alt="Pride and Prejudice"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Pride and Prejudice</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Jane Austen</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$8.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$8.99</span>
+                <span class="text-xs text-gray-400 line-through">$11.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -480,13 +543,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://imgs.search.brave.com/aI_1h5cS7Xk_QPNGObS8EAJy-MvMn55BiZjcUoedMV0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxT3c2TVVPeDJM/LmpwZw" alt="The Art of War"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Art of War</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Sun Tzu</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$20.99</span>
+                <span class="text-xs text-gray-400 line-through">$26.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -496,13 +563,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://imgs.search.brave.com/WQ6h75ty7-ytv-XG9c5PywSF82c0aAWjMzAlXL4i4r0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxdERsWlJLRzdM/LmpwZw" alt="The Prince"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Prince</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Niccolò Machiavelli</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$20.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$20.99</span>
+                <span class="text-xs text-gray-400 line-through">$26.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -512,13 +583,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://i.thriftbooks.com/api/imagehandler/s/4CF42EE9E0D50CCB9C53F75570637957B7BAEDC5.jpeg" alt="Alexander Hamilton"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Alexander Hamilton</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Ron Chernow</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$6.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$6.99</span>
+                <span class="text-xs text-gray-400 line-through">$8.74</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -528,13 +603,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/you-become-what-you-think-1767259216.jpg" alt="You Become What You Think"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">You Become What You Think</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Shubham Kumar Singh</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$11.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$11.99</span>
+                <span class="text-xs text-gray-400 line-through">$14.99</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -544,13 +623,17 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/the-power-of-discipline-how-to-use-self-control-and-mental-toughness-to-achieve-your-goals-1767277249.jpg" alt="The Power of Discipline"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">The Power of Discipline: How to Use Self Control and Mental Toughness to Achieve Your Goals</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Daniel Walter</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$16.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$16.99</span>
+                <span class="text-xs text-gray-400 line-through">$21.24</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -560,30 +643,37 @@
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/dont-believe-everything-you-think-1767250619.jpg" alt="Don't Believe Everything You Think"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Don't Believe Everything You Think</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Joseph Nguyen</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$13.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$13.99</span>
+                <span class="text-xs text-gray-400 line-through">$17.49</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
-
 
         <article
           class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
           <a href="login.html" class="block relative overflow-hidden aspect-[3/4]">
             <img src="https://booksharekh.com/images/covers/digital-marketing-strategy-an-integrated-approach-to-online-marketing-1767339639.jpg" alt="Digital Marketing Strategy: An Integrated Approach to Online Marketing"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 left-2 bg-rose-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md">-20%</span>
           </a>
           <div class="p-3.5 flex flex-1 flex-col">
             <h3 class="font-semibold text-gray-900 dark:text-white text-sm leading-snug whitespace-normal break-words">Digital Marketing Strategy: An Integrated Approach to Online Marketing</h3>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">John Doe</p>
             <div class="mt-auto pt-2 flex items-center justify-between">
-              <span class="text-green-700 dark:text-green-400 font-bold">$13.00</span>
-              <button class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</button>
+              <div class="flex items-end gap-1.5">
+                <span class="text-green-700 dark:text-green-400 font-bold">$13.99</span>
+                <span class="text-xs text-gray-400 line-through">$17.49</span>
+              </div>
+              <a href="login.html" class="bg-green-600 text-white text-[11px] px-2 py-1 rounded-md hover:bg-green-700 transition-colors">Add</a>
             </div>
           </div>
         </article>
@@ -598,7 +688,7 @@
   </section>
 
   <!--Why bookery-->
-  <section class="py-16 bg-green-50 dark:bg-gray-950/60">
+  <section class="py-16 bg-[#f5f5f5] dark:bg-gray-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white" style="font-family:'Playfair Display',serif">Why
@@ -815,6 +905,173 @@
 
   <!-- Script -->
   <script>
+    function getCurrentUser() {
+      try {
+        return JSON.parse(localStorage.getItem('bookery-user') || 'null');
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function getUserCartKey() {
+      const user = getCurrentUser();
+      if (user && user.email) {
+        return `bookery-cart-${String(user.email).toLowerCase()}`;
+      }
+      return 'bookery-cart-guest';
+    }
+
+    function readCartByKey(key) {
+      try {
+        return JSON.parse(localStorage.getItem(key) || '[]');
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function getCart() {
+      return readCartByKey(getUserCartKey());
+    }
+
+    function setCart(items) {
+      localStorage.setItem(getUserCartKey(), JSON.stringify(items));
+    }
+
+    function getCartCount() {
+      return getCart().reduce(function (sum, item) {
+        return sum + Number(item.qty || 0);
+      }, 0);
+    }
+
+    function mergeGuestCartAfterLogin() {
+      const user = getCurrentUser();
+      if (!user || !user.email) return;
+
+      const guestKey = 'bookery-cart-guest';
+      const userKey = getUserCartKey();
+      const guestCart = readCartByKey(guestKey);
+      if (!guestCart.length) return;
+
+      const userCart = readCartByKey(userKey);
+      guestCart.forEach(function (item) {
+        const found = userCart.find(function (entry) {
+          return entry.id === item.id;
+        });
+        if (found) {
+          found.qty += Number(item.qty || 1);
+        } else {
+          userCart.push(item);
+        }
+      });
+      localStorage.setItem(userKey, JSON.stringify(userCart));
+      localStorage.removeItem(guestKey);
+    }
+
+    function updateHeaderByAuthState() {
+      const header = document.querySelector('header');
+      if (!header) return;
+
+      const desktopNav = header.querySelector('.hidden.md\\:flex.items-center.gap-8');
+      if (desktopNav && !desktopNav.querySelector('[data-cart-link]')) {
+        const cartLink = document.createElement('a');
+        cartLink.href = 'cart.html';
+        cartLink.dataset.cartLink = 'desktop';
+        cartLink.className = 'text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors';
+        desktopNav.appendChild(cartLink);
+      }
+
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu && !mobileMenu.querySelector('[data-cart-link="mobile"]')) {
+        const mobileCartLink = document.createElement('a');
+        mobileCartLink.href = 'cart.html';
+        mobileCartLink.dataset.cartLink = 'mobile';
+        mobileCartLink.className = 'block py-2 text-gray-700 dark:text-gray-300';
+        const authRow = mobileMenu.querySelector('.flex.gap-3.pt-2');
+        if (authRow) {
+          mobileMenu.insertBefore(mobileCartLink, authRow);
+        } else {
+          mobileMenu.appendChild(mobileCartLink);
+        }
+      }
+
+      const count = getCartCount();
+      header.querySelectorAll('[data-cart-link]').forEach(function (link) {
+        link.textContent = count > 0 ? `Cart (${count})` : 'Cart';
+      });
+
+      const user = getCurrentUser();
+      if (!user) return;
+
+      const firstName = (user.name || user.email || 'User').trim().split(/\s+/)[0];
+      header.querySelectorAll('a[href="login.html"]').forEach(function (link) {
+        link.href = '#';
+        link.textContent = `Hi, ${firstName}`;
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+        });
+      });
+
+      header.querySelectorAll('a[href="register.html"]').forEach(function (link) {
+        link.href = '#';
+        link.textContent = 'Logout';
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          localStorage.removeItem('bookery-user');
+          window.location.href = 'index.html';
+        });
+      });
+    }
+
+    function parsePrice(card) {
+      const spans = card.querySelectorAll('span');
+      for (let i = 0; i < spans.length; i += 1) {
+        const text = spans[i].textContent || '';
+        if (text.includes('$')) {
+          const price = parseFloat(text.replace(/[^0-9.]/g, ''));
+          if (!Number.isNaN(price)) return price;
+        }
+      }
+      return 0;
+    }
+
+    function bindAddButtons() {
+      const addLinks = Array.from(document.querySelectorAll('article a[href="login.html"]')).filter(function (link) {
+        return link.textContent.trim().toLowerCase() === 'add';
+      });
+
+      addLinks.forEach(function (link) {
+        link.href = '#';
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const card = link.closest('article');
+          if (!card) return;
+
+          const title = (card.querySelector('h3') ? card.querySelector('h3').textContent : 'Book').trim();
+          const author = (card.querySelector('p') ? card.querySelector('p').textContent : 'Unknown Author').trim();
+          const image = (card.querySelector('img') ? card.querySelector('img').src : '').trim();
+          const price = parsePrice(card);
+          const id = `${title}::${author}`.toLowerCase().replace(/\s+/g, '-');
+
+          const cart = getCart();
+          const found = cart.find(function (item) {
+            return item.id === id;
+          });
+          if (found) {
+            found.qty += 1;
+          } else {
+            cart.push({ id: id, title: title, author: author, image: image, price: price, qty: 1 });
+          }
+
+          setCart(cart);
+          updateHeaderByAuthState();
+          link.textContent = 'Added';
+          setTimeout(function () {
+            link.textContent = 'Add';
+          }, 900);
+        });
+      });
+    }
+
     document.querySelectorAll('.theme-toggle-btn').forEach(function (button) {
       button.addEventListener('click', function () {
         document.documentElement.classList.toggle('dark');
@@ -825,6 +1082,10 @@
     document.getElementById('menu-btn').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+
+    mergeGuestCartAfterLogin();
+    updateHeaderByAuthState();
+    bindAddButtons();
   </script>
 </body>
 </html>
