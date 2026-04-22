@@ -354,7 +354,7 @@
           </ul>
           <h4 class="font-semibold text-green-100 mt-5 mb-4">Address</h4>
           <a class="text-sm text-green-300 hover:text-white transition-colors leading-relaxed"
-            href="https://maps.app.goo.gl/dVsqRMq7sDG0Q48M8" target="_blank">
+            href="https://www.google.com/maps/place/Science+and+Technology+Advanced+Development+Co.,+Ltd./@11.5835687,104.9016615,15z/data=!4m6!3m5!1s0x310951e96d257a6f:0x6b66703c5fc0c7cc!8m2!3d11.585256!4d104.9014024!16s%2Fg%2F11t3kbs2y2?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
             No. 40, Street 273,
             <br>
             Sangkat Boeung Kak I,
@@ -379,6 +379,113 @@
 
 
   <script>
+    function getCurrentUser() {
+      try {
+        return JSON.parse(localStorage.getItem('bookery-user') || 'null');
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function getUserCartKey() {
+      const user = getCurrentUser();
+      if (user && user.email) {
+        return `bookery-cart-${String(user.email).toLowerCase()}`;
+      }
+      return 'bookery-cart-guest';
+    }
+
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem(getUserCartKey()) || '[]');
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function setCart(items) {
+      localStorage.setItem(getUserCartKey(), JSON.stringify(items));
+    }
+
+    function mergeGuestCartAfterLogin() {
+      const user = getCurrentUser();
+      if (!user || !user.email) return;
+
+      const guestCart = JSON.parse(localStorage.getItem('bookery-cart-guest') || '[]');
+      if (!guestCart.length) return;
+
+      const userCart = getCart();
+      guestCart.forEach(function (item) {
+        const found = userCart.find(function (entry) {
+          return entry.id === item.id;
+        });
+        if (found) {
+          found.qty += Number(item.qty || 1);
+        } else {
+          userCart.push(item);
+        }
+      });
+      setCart(userCart);
+      localStorage.removeItem('bookery-cart-guest');
+    }
+
+    function updateHeaderByAuthState() {
+      const header = document.querySelector('header');
+      if (!header) return;
+
+      const desktopNav = header.querySelector('.hidden.md\\:flex.items-center.gap-8');
+      if (desktopNav && !desktopNav.querySelector('[data-cart-link]')) {
+        const cartLink = document.createElement('a');
+        cartLink.href = 'cart.html';
+        cartLink.dataset.cartLink = 'desktop';
+        cartLink.className = 'text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors';
+        desktopNav.appendChild(cartLink);
+      }
+
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu && !mobileMenu.querySelector('[data-cart-link="mobile"]')) {
+        const mobileCartLink = document.createElement('a');
+        mobileCartLink.href = 'cart.html';
+        mobileCartLink.dataset.cartLink = 'mobile';
+        mobileCartLink.className = 'block py-2 text-gray-700 dark:text-gray-300';
+        const authRow = mobileMenu.querySelector('.flex.gap-3.pt-2');
+        if (authRow) {
+          mobileMenu.insertBefore(mobileCartLink, authRow);
+        } else {
+          mobileMenu.appendChild(mobileCartLink);
+        }
+      }
+
+      const count = getCart().reduce(function (sum, item) {
+        return sum + Number(item.qty || 0);
+      }, 0);
+      header.querySelectorAll('[data-cart-link]').forEach(function (link) {
+        link.textContent = count > 0 ? `Cart (${count})` : 'Cart';
+      });
+
+      const user = getCurrentUser();
+      if (!user) return;
+
+      const firstName = (user.name || user.email || 'User').trim().split(/\s+/)[0];
+      header.querySelectorAll('a[href="login.html"]').forEach(function (link) {
+        link.href = '#';
+        link.textContent = `Hi, ${firstName}`;
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+        });
+      });
+
+      header.querySelectorAll('a[href="register.html"]').forEach(function (link) {
+        link.href = '#';
+        link.textContent = 'Logout';
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          localStorage.removeItem('bookery-user');
+          window.location.href = 'index.html';
+        });
+      });
+    }
+
     document.getElementById('menu-btn').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
@@ -386,6 +493,9 @@
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('bookery-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     });
+
+    mergeGuestCartAfterLogin();
+    updateHeaderByAuthState();
   </script>
 </body>
 

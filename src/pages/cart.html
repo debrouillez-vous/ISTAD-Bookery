@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/output.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png" />
+  <title>Bookery - Cart</title>
+  <script>
+    (function () {
+      const saved = localStorage.getItem('bookery-theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-30">
+  <header
+    class="fixed inset-x-0 top-0 z-50 mx-auto w-full max-w-screen-lg border border-gray-100 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="../assets/images/logo.png" alt="Bookery Logo" class="h-10 w-10 object-contain" />
+          <span class="text-2xl font-bold text-green-700 dark:text-green-400"
+            style="font-family:'Playfair Display',serif">Bookery</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Home</a>
+          <a href="listing.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Books</a>
+          <a href="about.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">About</a>
+          <a href="contact.html"
+            class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" title="Toggle dark mode"
+            class="text-gray-500 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors p-1">
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+          <a href="login.html"
+            class="hidden md:inline-block text-green-700 dark:text-green-400 border border-green-600 dark:border-green-500 px-4 py-1.5 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/30 transition-all font-medium text-sm">Login</a>
+          <a href="register.html"
+            class="hidden md:inline-block bg-green-600 text-white px-4 py-1.5 rounded-lg hover:bg-green-700 transition-all font-medium text-sm">Register</a>
+          <button id="menu-btn" class="md:hidden text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="hidden md:hidden border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 space-y-2">
+      <a href="index.html" class="block py-2 text-gray-700 dark:text-gray-300">Home</a>
+      <a href="listing.html" class="block py-2 text-gray-700 dark:text-gray-300">Books</a>
+      <a href="about.html" class="block py-2 text-gray-700 dark:text-gray-300">About</a>
+      <a href="contact.html" class="block py-2 text-gray-700 dark:text-gray-300">Contact</a>
+      <div class="flex gap-3 pt-2">
+        <a href="login.html"
+          class="flex-1 text-center border border-green-600 dark:border-green-500 text-green-700 dark:text-green-400 py-2 rounded-lg font-medium text-sm">Login</a>
+        <a href="register.html"
+          class="flex-1 text-center bg-green-600 text-white py-2 rounded-lg font-medium text-sm">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white" style="font-family:'Playfair Display',serif">Shopping Cart</h1>
+        <p class="text-gray-500 dark:text-gray-400 mt-1">Review your books before checkout.</p>
+      </div>
+      <a href="listing.html"
+        class="inline-flex items-center gap-2 text-green-700 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 font-medium">
+        Continue shopping
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <section class="lg:col-span-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5">
+        <div id="cart-items" class="space-y-4"></div>
+      </section>
+
+      <aside class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 h-fit">
+        <h2 class="font-semibold text-lg text-gray-900 dark:text-white mb-4">Order Summary</h2>
+        <div class="flex items-center justify-between text-sm mb-2">
+          <span class="text-gray-500 dark:text-gray-400">Subtotal</span>
+          <span id="subtotal-value" class="font-semibold text-gray-900 dark:text-white">$0.00</span>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mb-5">Shipping and tax will be calculated at checkout.</p>
+        <button id="checkout-btn"
+          class="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors">Proceed to Checkout</button>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    function getCurrentUser() {
+      try {
+        return JSON.parse(localStorage.getItem('bookery-user') || 'null');
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function getUserCartKey() {
+      const user = getCurrentUser();
+      if (user && user.email) {
+        return `bookery-cart-${String(user.email).toLowerCase()}`;
+      }
+      return 'bookery-cart-guest';
+    }
+
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem(getUserCartKey()) || '[]');
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function setCart(items) {
+      localStorage.setItem(getUserCartKey(), JSON.stringify(items));
+    }
+
+    function formatMoney(amount) {
+      return `$${Number(amount || 0).toFixed(2)}`;
+    }
+
+    function getSubtotal() {
+      return getCart().reduce(function (sum, item) {
+        return sum + Number(item.price || 0) * Number(item.qty || 0);
+      }, 0);
+    }
+
+    function mergeGuestCartAfterLogin() {
+      const user = getCurrentUser();
+      if (!user || !user.email) return;
+
+      const guestCart = JSON.parse(localStorage.getItem('bookery-cart-guest') || '[]');
+      if (!guestCart.length) return;
+
+      const userCart = getCart();
+      guestCart.forEach(function (item) {
+        const found = userCart.find(function (entry) {
+          return entry.id === item.id;
+        });
+        if (found) {
+          found.qty += Number(item.qty || 1);
+        } else {
+          userCart.push(item);
+        }
+      });
+      setCart(userCart);
+      localStorage.removeItem('bookery-cart-guest');
+    }
+
+    function updateHeaderByAuthState() {
+      const header = document.querySelector('header');
+      if (!header) return;
+
+      const desktopNav = header.querySelector('.hidden.md\\:flex.items-center.gap-8');
+      if (desktopNav && !desktopNav.querySelector('[data-cart-link]')) {
+        const cartLink = document.createElement('a');
+        cartLink.href = 'cart.html';
+        cartLink.dataset.cartLink = 'desktop';
+        cartLink.className = 'text-green-700 dark:text-green-400 font-semibold border-b-2 border-green-600 dark:border-green-400 pb-0.5';
+        desktopNav.appendChild(cartLink);
+      }
+
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu && !mobileMenu.querySelector('[data-cart-link="mobile"]')) {
+        const mobileCartLink = document.createElement('a');
+        mobileCartLink.href = 'cart.html';
+        mobileCartLink.dataset.cartLink = 'mobile';
+        mobileCartLink.className = 'block py-2 text-green-700 dark:text-green-400 font-semibold';
+        const authRow = mobileMenu.querySelector('.flex.gap-3.pt-2');
+        if (authRow) {
+          mobileMenu.insertBefore(mobileCartLink, authRow);
+        } else {
+          mobileMenu.appendChild(mobileCartLink);
+        }
+      }
+
+      const count = getCart().reduce(function (sum, item) {
+        return sum + Number(item.qty || 0);
+      }, 0);
+      header.querySelectorAll('[data-cart-link]').forEach(function (link) {
+        link.textContent = count > 0 ? `Cart (${count})` : 'Cart';
+      });
+
+      const user = getCurrentUser();
+      if (!user) return;
+
+      const firstName = (user.name || user.email || 'User').trim().split(/\s+/)[0];
+      header.querySelectorAll('a[href="login.html"]').forEach(function (link) {
+        link.href = '#';
+        link.textContent = `Hi, ${firstName}`;
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+        });
+      });
+
+      header.querySelectorAll('a[href="register.html"]').forEach(function (link) {
+        link.href = '#';
+        link.textContent = 'Logout';
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          localStorage.removeItem('bookery-user');
+          window.location.href = 'index.html';
+        });
+      });
+    }
+
+    function renderCart() {
+      const itemsContainer = document.getElementById('cart-items');
+      const subtotalElement = document.getElementById('subtotal-value');
+      const items = getCart();
+
+      if (!items.length) {
+        itemsContainer.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Your cart is empty.</p>';
+        subtotalElement.textContent = '$0.00';
+        return;
+      }
+
+      itemsContainer.innerHTML = items.map(function (item) {
+        const image = item.image || '../assets/images/logo.png';
+        return `
+          <article class="flex gap-4 border border-gray-100 dark:border-gray-700 rounded-xl p-3">
+            <img src="${image}" alt="${item.title}" class="w-20 h-28 object-cover rounded-lg bg-gray-100 dark:bg-gray-700" />
+            <div class="flex-1 min-w-0">
+              <h3 class="font-semibold text-gray-900 dark:text-white">${item.title}</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">${item.author}</p>
+              <p class="text-sm font-semibold text-green-700 dark:text-green-400 mt-1">${formatMoney(item.price)}</p>
+              <div class="flex items-center gap-2 mt-3">
+                <button data-action="decrease" data-id="${item.id}" class="w-8 h-8 rounded-lg border border-gray-200 dark:border-gray-700">-</button>
+                <span class="min-w-6 text-center">${item.qty}</span>
+                <button data-action="increase" data-id="${item.id}" class="w-8 h-8 rounded-lg border border-gray-200 dark:border-gray-700">+</button>
+                <button data-action="remove" data-id="${item.id}" class="ml-3 text-sm text-red-600 hover:text-red-700">Remove</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      subtotalElement.textContent = formatMoney(getSubtotal());
+      updateHeaderByAuthState();
+    }
+
+    document.addEventListener('click', function (event) {
+      const target = event.target;
+      if (!(target instanceof HTMLElement) || !target.dataset.action) return;
+
+      const id = target.dataset.id;
+      const action = target.dataset.action;
+      const cart = getCart();
+      const currentItem = cart.find(function (item) {
+        return item.id === id;
+      });
+      if (!currentItem) return;
+
+      if (action === 'increase') {
+        currentItem.qty += 1;
+        setCart(cart);
+      }
+      if (action === 'decrease') {
+        currentItem.qty -= 1;
+        if (currentItem.qty <= 0) {
+          setCart(cart.filter(function (item) { return item.id !== id; }));
+        } else {
+          setCart(cart);
+        }
+      }
+      if (action === 'remove') {
+        setCart(cart.filter(function (item) { return item.id !== id; }));
+      }
+      renderCart();
+    });
+
+    document.getElementById('checkout-btn').addEventListener('click', function () {
+      if (!getCart().length) return;
+      window.location.href = 'checkout.html';
+    });
+
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('bookery-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    mergeGuestCartAfterLogin();
+    updateHeaderByAuthState();
+    renderCart();
+  </script>
+</body>
+
+</html>
