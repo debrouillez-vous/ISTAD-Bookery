@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../css/output.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png" />
-  <title>Bookery - Checkout</title>
+  <link href="src/css/output.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="src/assets/images/logo.png" />
+  <title>Bookery - Cart</title>
   <script>
     (function () {
       const saved = localStorage.getItem('bookery-theme');
@@ -22,13 +22,13 @@
     class="fixed inset-x-0 top-0 z-50 mx-auto w-full max-w-screen-lg border border-gray-100 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="../../index.html" class="flex items-center gap-2">
-          <img src="../assets/images/logo.png" alt="Bookery Logo" class="h-10 w-10 object-contain" />
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="src/assets/images/logo.png" alt="Bookery Logo" class="h-10 w-10 object-contain" />
           <span class="text-2xl font-bold text-green-700 dark:text-green-400"
             style="font-family:'Playfair Display',serif">Bookery</span>
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="../../index.html"
+          <a href="index.html"
             class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Home</a>
           <a href="listing.html"
             class="text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors">Books</a>
@@ -63,7 +63,7 @@
     </div>
     <div id="mobile-menu"
       class="hidden md:hidden border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 space-y-2">
-      <a href="../../index.html" class="block py-2 text-gray-700 dark:text-gray-300">Home</a>
+      <a href="index.html" class="block py-2 text-gray-700 dark:text-gray-300">Home</a>
       <a href="listing.html" class="block py-2 text-gray-700 dark:text-gray-300">Books</a>
       <a href="about.html" class="block py-2 text-gray-700 dark:text-gray-300">About</a>
       <a href="contact.html" class="block py-2 text-gray-700 dark:text-gray-300">Contact</a>
@@ -76,92 +76,33 @@
     </div>
   </header>
 
-  <main class="bg-[#f5f5f5] dark:bg-gray-900 py-10">
-    <div class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div id="checkout-wrapper" class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700">
-        <form id="checkout-form">
-          <h1 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" style="font-family:'Playfair Display',serif">Checkout</h1>
-
-          <!-- Shipping Address -->
-          <div class="mb-6">
-            <h2 class="text-xl font-semibold text-gray-700 dark:text-white mb-2">Shipping Address</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="first_name" class="block text-gray-700 dark:text-white mb-1">First Name</label>
-                <input required type="text" id="first_name"
-                  class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-              </div>
-              <div>
-                <label for="last_name" class="block text-gray-700 dark:text-white mb-1">Last Name</label>
-                <input required type="text" id="last_name"
-                  class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <label for="address" class="block text-gray-700 dark:text-white mb-1">Address</label>
-              <input required type="text" id="address"
-                class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-            </div>
-
-            <div class="mt-4">
-              <label for="city" class="block text-gray-700 dark:text-white mb-1">City</label>
-              <input required type="text" id="city"
-                class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-              <div>
-                <label for="state" class="block text-gray-700 dark:text-white mb-1">State</label>
-                <input required type="text" id="state"
-                  class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-              </div>
-              <div>
-                <label for="zip" class="block text-gray-700 dark:text-white mb-1">ZIP Code</label>
-                <input required type="text" id="zip"
-                  class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-              </div>
-            </div>
-          </div>
-
-          <!-- Payment Information -->
-          <div>
-            <h2 class="text-xl font-semibold text-gray-700 dark:text-white mb-2">Payment Information</h2>
-            <div class="mt-4">
-              <label for="card_number" class="block text-gray-700 dark:text-white mb-1">Card Number</label>
-              <input required type="text" id="card_number"
-                class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-              <div>
-                <label for="exp_date" class="block text-gray-700 dark:text-white mb-1">Expiration Date</label>
-                <input required type="text" id="exp_date"
-                  class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-              </div>
-              <div>
-                <label for="cvv" class="block text-gray-700 dark:text-white mb-1">CVV</label>
-                <input required type="text" id="cvv"
-                  class="w-full rounded-lg border border-gray-200 py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-gray-600">
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <h2 class="text-xl font-semibold text-gray-700 dark:text-white mb-3">Order Summary</h2>
-            <div id="checkout-items" class="space-y-3"></div>
-            <div class="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4 flex items-center justify-between">
-              <span class="font-medium text-gray-700 dark:text-gray-300">Total</span>
-              <span id="checkout-total" class="font-bold text-green-700 dark:text-green-400">$0.00</span>
-            </div>
-          </div>
-
-          <div class="mt-8 flex justify-end">
-            <button type="submit"
-              class="bg-green-600 text-white px-5 py-2.5 rounded-lg hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-500 font-semibold transition-colors">Place Order</button>
-          </div>
-        </form>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white" style="font-family:'Playfair Display',serif">Shopping Cart</h1>
+        <p class="text-gray-500 dark:text-gray-400 mt-1">Review your books before checkout.</p>
       </div>
+      <a href="listing.html"
+        class="inline-flex items-center gap-2 text-green-700 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 font-medium">
+        Continue shopping
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <section class="lg:col-span-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5">
+        <div id="cart-items" class="space-y-4"></div>
+      </section>
+
+      <aside class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 h-fit">
+        <h2 class="font-semibold text-lg text-gray-900 dark:text-white mb-4">Order Summary</h2>
+        <div class="flex items-center justify-between text-sm mb-2">
+          <span class="text-gray-500 dark:text-gray-400">Subtotal</span>
+          <span id="subtotal-value" class="font-semibold text-gray-900 dark:text-white">$0.00</span>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mb-5">Shipping and tax will be calculated at checkout.</p>
+        <button id="checkout-btn"
+          class="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors">Proceed to Checkout</button>
+      </aside>
     </div>
   </main>
 
@@ -194,14 +135,14 @@
       localStorage.setItem(getUserCartKey(), JSON.stringify(items));
     }
 
+    function formatMoney(amount) {
+      return `$${Number(amount || 0).toFixed(2)}`;
+    }
+
     function getSubtotal() {
       return getCart().reduce(function (sum, item) {
         return sum + Number(item.price || 0) * Number(item.qty || 0);
       }, 0);
-    }
-
-    function formatMoney(amount) {
-      return `$${Number(amount || 0).toFixed(2)}`;
     }
 
     function mergeGuestCartAfterLogin() {
@@ -235,7 +176,7 @@
         const cartLink = document.createElement('a');
         cartLink.href = 'cart.html';
         cartLink.dataset.cartLink = 'desktop';
-        cartLink.className = 'text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium transition-colors';
+        cartLink.className = 'text-green-700 dark:text-green-400 font-semibold border-b-2 border-green-600 dark:border-green-400 pb-0.5';
         desktopNav.appendChild(cartLink);
       }
 
@@ -244,7 +185,7 @@
         const mobileCartLink = document.createElement('a');
         mobileCartLink.href = 'cart.html';
         mobileCartLink.dataset.cartLink = 'mobile';
-        mobileCartLink.className = 'block py-2 text-gray-700 dark:text-gray-300';
+        mobileCartLink.className = 'block py-2 text-green-700 dark:text-green-400 font-semibold';
         const authRow = mobileMenu.querySelector('.flex.gap-3.pt-2');
         if (authRow) {
           mobileMenu.insertBefore(mobileCartLink, authRow);
@@ -283,58 +224,74 @@
       });
     }
 
-    function renderCheckout() {
-      if (!getCurrentUser()) {
-        window.location.href = 'login.html?redirect=checkout.html';
-        return;
-      }
-
+    function renderCart() {
+      const itemsContainer = document.getElementById('cart-items');
+      const subtotalElement = document.getElementById('subtotal-value');
       const items = getCart();
-      const wrapper = document.getElementById('checkout-wrapper');
-      const itemContainer = document.getElementById('checkout-items');
-      const totalElement = document.getElementById('checkout-total');
 
       if (!items.length) {
-        wrapper.innerHTML = `
-          <section class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center">
-            <h1 class="text-2xl font-bold text-gray-800 dark:text-white mb-3" style="font-family:'Playfair Display',serif">Checkout</h1>
-            <p class="text-gray-500 dark:text-gray-400 mb-4">Your cart is empty.</p>
-            <a href="listing.html" class="inline-block bg-green-600 text-white px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors">Browse books</a>
-          </section>
-        `;
+        itemsContainer.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Your cart is empty.</p>';
+        subtotalElement.textContent = '$0.00';
         return;
       }
 
-      itemContainer.innerHTML = items.map(function (item) {
+      itemsContainer.innerHTML = items.map(function (item) {
+        const image = item.image || '../assets/images/logo.png';
         return `
-          <div class="flex items-center justify-between gap-3 text-sm">
-            <div class="min-w-0">
-              <p class="font-medium text-gray-900 dark:text-white truncate">${item.title}</p>
-              <p class="text-gray-500 dark:text-gray-400">Qty: ${item.qty}</p>
+          <article class="flex gap-4 border border-gray-100 dark:border-gray-700 rounded-xl p-3">
+            <img src="${image}" alt="${item.title}" class="w-20 h-28 object-cover rounded-lg bg-gray-100 dark:bg-gray-700" />
+            <div class="flex-1 min-w-0">
+              <h3 class="font-semibold text-gray-900 dark:text-white">${item.title}</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">${item.author}</p>
+              <p class="text-sm font-semibold text-green-700 dark:text-green-400 mt-1">${formatMoney(item.price)}</p>
+              <div class="flex items-center gap-2 mt-3">
+                <button data-action="decrease" data-id="${item.id}" class="w-8 h-8 rounded-lg border border-gray-200 dark:border-gray-700">-</button>
+                <span class="min-w-6 text-center">${item.qty}</span>
+                <button data-action="increase" data-id="${item.id}" class="w-8 h-8 rounded-lg border border-gray-200 dark:border-gray-700">+</button>
+                <button data-action="remove" data-id="${item.id}" class="ml-3 text-sm text-red-600 hover:text-red-700">Remove</button>
+              </div>
             </div>
-            <span class="font-semibold text-gray-900 dark:text-white">${formatMoney(item.price * item.qty)}</span>
-          </div>
+          </article>
         `;
       }).join('');
 
-      totalElement.textContent = formatMoney(getSubtotal());
+      subtotalElement.textContent = formatMoney(getSubtotal());
       updateHeaderByAuthState();
     }
 
-    document.getElementById('checkout-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const user = getCurrentUser();
+    document.addEventListener('click', function (event) {
+      const target = event.target;
+      if (!(target instanceof HTMLElement) || !target.dataset.action) return;
 
-      localStorage.setItem('bookery-last-order', JSON.stringify({
-        userEmail: user ? user.email : '',
-        items: getCart(),
-        subtotal: getSubtotal(),
-        createdAt: new Date().toISOString()
-      }));
+      const id = target.dataset.id;
+      const action = target.dataset.action;
+      const cart = getCart();
+      const currentItem = cart.find(function (item) {
+        return item.id === id;
+      });
+      if (!currentItem) return;
 
-      setCart([]);
-      alert('Order placed successfully!');
-      window.location.href = 'index.html';
+      if (action === 'increase') {
+        currentItem.qty += 1;
+        setCart(cart);
+      }
+      if (action === 'decrease') {
+        currentItem.qty -= 1;
+        if (currentItem.qty <= 0) {
+          setCart(cart.filter(function (item) { return item.id !== id; }));
+        } else {
+          setCart(cart);
+        }
+      }
+      if (action === 'remove') {
+        setCart(cart.filter(function (item) { return item.id !== id; }));
+      }
+      renderCart();
+    });
+
+    document.getElementById('checkout-btn').addEventListener('click', function () {
+      if (!getCart().length) return;
+      window.location.href = 'checkout.html';
     });
 
     document.getElementById('menu-btn').addEventListener('click', function () {
@@ -347,7 +304,7 @@
 
     mergeGuestCartAfterLogin();
     updateHeaderByAuthState();
-    renderCheckout();
+    renderCart();
   </script>
 </body>
 
