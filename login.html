@@ -254,12 +254,32 @@
 
     window.addEventListener('load', function () {
       if (window.google) {
+        google.accounts.id.initialize({
+          client_id: '694453164575-ekempbu7i6h9ron39vo21i5998rp141c.apps.googleusercontent.com',
+          callback: handleCredentialResponse,
+          error_callback: function() {
+            console.error('Google Sign-In initialization error - check origin mismatch in Google Cloud Console');
+            showAlert('Google Sign-In is not properly configured. Contact support.');
+          }
+        });
         google.accounts.id.renderButton(
           document.getElementById('google-signin-btn'),
-          { type: 'standard', size: 'large', width: 600, text: 'signin_with', shape: 'rectangular', theme: 'outline' }
+          { type: 'standard', size: 'large', width: '100%', text: 'signin_with', shape: 'rectangular', theme: 'outline' }
         );
+      } else {
+        console.error('Google Identity Services library failed to load');
       }
     });
+
+    // Initialize Google Sign-In on g_id_onload
+    if (document.getElementById('g_id_onload')) {
+      window.onload = function() {
+        google.accounts.id.initialize({
+          client_id: '694453164575-ekempbu7i6h9ron39vo21i5998rp141c.apps.googleusercontent.com',
+          callback: handleCredentialResponse
+        });
+      };
+    }
 
     document.getElementById('theme-toggle').addEventListener('click', function () {
       document.documentElement.classList.toggle('dark');
