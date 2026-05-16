@@ -133,7 +133,7 @@
 
         <!-- Google Sign-In Button -->
         <div class="relative w-full h-11 rounded-lg overflow-hidden cursor-pointer">
-          <div class="absolute inset-0 flex items-center justify-center gap-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-sm pointer-events-none">
+          <div class="absolute inset-0 flex items-center justify-center gap-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-sm pointer-events-none z-0">
             <svg class="w-5 h-5" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -142,7 +142,7 @@
             </svg>
             Continue with Google
           </div>
-          <div class="absolute inset-0 opacity-0" id="google-signin-btn"></div>
+          <div class="absolute inset-0 opacity-0 z-10" id="google-signin-btn"></div>
         </div>
 
       </div>
@@ -264,22 +264,13 @@
         });
         google.accounts.id.renderButton(
           document.getElementById('google-signin-btn'),
-          { type: 'standard', size: 'large', width: '100%', text: 'signin_with', shape: 'rectangular', theme: 'outline' }
+          { type: 'standard', size: 'large', text: 'signin_with', shape: 'rectangular', theme: 'outline' }
         );
       } else {
         console.error('Google Identity Services library failed to load');
       }
     });
-
-    // Initialize Google Sign-In on g_id_onload
-    if (document.getElementById('g_id_onload')) {
-      window.onload = function() {
-        google.accounts.id.initialize({
-          client_id: '694453164575-ekempbu7i6h9ron39vo21i5998rp141c.apps.googleusercontent.com',
-          callback: handleCredentialResponse
-        });
-      };
-    }
+    
 
     document.getElementById('theme-toggle').addEventListener('click', function () {
       document.documentElement.classList.toggle('dark');
