@@ -290,7 +290,8 @@
               <div class="flex-1 h-px bg-gray-200 dark:bg-gray-700"></div>
             </div>
 
-            <div class="w-full flex justify-center" id="google-signin-btn"></div>
+            <!-- ✅ FIXED: Google Sign-Up Button — rendered directly, no opacity-0 overlay trick -->
+            <div class="flex justify-center w-full overflow-hidden" id="google-signin-btn" style="width:100%;max-width:100%"></div>
 
             <div class="flex justify-end">
               <button type="button" @click="nextStep"
@@ -513,6 +514,7 @@
           })
         });
         const result = await res.json();
+        // Whether new or existing, log them in
         if (result.success || !result.isNew) {
           localStorage.setItem('bookery-user', JSON.stringify(user));
           window.location.href = getPostAuthRedirect();
@@ -525,6 +527,24 @@
       }
     }
 
+    function renderGoogleButton() {
+      const container = document.getElementById('google-signin-btn');
+      container.innerHTML = '';
+      const isDark = document.documentElement.classList.contains('dark');
+      const card = container.closest('.rounded-2xl') || container.parentElement;
+      const cardWidth = card.getBoundingClientRect().width;
+      const padding = parseFloat(getComputedStyle(card).paddingLeft) + parseFloat(getComputedStyle(card).paddingRight);
+      const width = Math.floor(cardWidth - padding);
+      google.accounts.id.renderButton(container, {
+        type: 'standard',
+        size: 'large',
+        text: 'signup_with',
+        shape: 'rectangular',
+        theme: isDark ? 'filled_black' : 'outline',
+        width: width
+      });
+    }
+
     window.addEventListener('load', function () {
       if (window.google) {
         google.accounts.id.initialize({
@@ -535,17 +555,7 @@
             alert('Google Sign-In is not properly configured. Contact support.');
           }
         });
-        google.accounts.id.renderButton(
-          document.getElementById('google-signin-btn'),
-          {
-            type: 'standard',
-            size: 'large',
-            text: 'signup_with',
-            shape: 'rectangular',
-            theme: 'outline',
-            width: 560
-          }
-        );
+        renderGoogleButton();
       } else {
         console.error('Google Identity Services library failed to load');
       }
@@ -554,6 +564,7 @@
     document.getElementById('theme-toggle').addEventListener('click', function () {
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('bookery-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      if (window.google) renderGoogleButton();
     });
   </script>
 

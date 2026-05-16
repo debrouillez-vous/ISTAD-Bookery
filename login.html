@@ -131,7 +131,9 @@
           <div class="flex-1 h-px bg-gray-100 dark:bg-gray-700"></div>
         </div>
 
-        <div class="w-full flex justify-center" id="google-signin-btn"></div>
+        <div class="flex justify-center">
+          <div class="w-full sm:w-96 overflow-hidden" id="google-signin-btn"></div>
+        </div>
 
       </div>
 
@@ -240,6 +242,24 @@
       input.type = input.type === 'password' ? 'text' : 'password';
     });
 
+    function renderGoogleButton() {
+      const container = document.getElementById('google-signin-btn');
+      container.innerHTML = '';
+      const isDark = document.documentElement.classList.contains('dark');
+      const card = container.closest('.rounded-3xl') || container.parentElement;
+      const cardWidth = card.getBoundingClientRect().width;
+      const padding = parseFloat(getComputedStyle(card).paddingLeft) + parseFloat(getComputedStyle(card).paddingRight);
+      const width = Math.floor(cardWidth - padding);
+      google.accounts.id.renderButton(container, {
+        type: 'standard',
+        size: 'large',
+        text: 'signin_with',
+        shape: 'rectangular',
+        theme: isDark ? 'filled_black' : 'outline',
+        width: width
+      });
+    }
+
     window.addEventListener('load', function () {
       if (window.google) {
         google.accounts.id.initialize({
@@ -250,17 +270,7 @@
             showAlert('Google Sign-In is not properly configured. Contact support.');
           }
         });
-        google.accounts.id.renderButton(
-          document.getElementById('google-signin-btn'),
-          {
-            type: 'standard',
-            size: 'large',
-            text: 'signin_with',
-            shape: 'rectangular',
-            theme: 'outline',
-            width: 400
-          }
-        );
+        renderGoogleButton();
       } else {
         console.error('Google Identity Services library failed to load');
       }
@@ -269,6 +279,7 @@
     document.getElementById('theme-toggle').addEventListener('click', function () {
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('bookery-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      if (window.google) renderGoogleButton();
     });
   </script>
 
